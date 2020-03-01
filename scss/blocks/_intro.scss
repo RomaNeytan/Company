@@ -1,0 +1,110 @@
+.intro{
+    height: 100vh;
+    background: url("../../images/intro/bg.png") no-repeat center center;
+    background-size: cover;
+    padding-top: 220px;
+
+    &:after{
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        z-index: 1;
+    }
+
+    &-slider{
+        position: relative;
+        z-index: 5;
+        &__item{
+            padding-top: 35px;
+            text-align: center;
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
+            position: relative;
+
+            &:before{
+                content: " ";
+                display: block;
+                background: #675d83;
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top:-11%;
+            }
+        }
+        &__title{
+            font-size: 48px;
+            color:$main-color;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 39px;
+            
+
+            &:after,&:before{
+                content: " ";
+                display: block;
+                background: #675d83;
+                position: absolute;
+                top:-11%;
+                height: 100%;
+                width: 1px;
+            }
+
+            &:after{
+                left:0;
+            }
+            &:before{
+                right: 0;
+            }
+        }
+        &__description{
+            font-size: 11px;
+            color:#cdcdce;
+            line-height: 18px;
+            margin-bottom: 35px;
+        }
+        &__btn{
+            position: relative;
+            &:after,&:before{
+                content: " ";
+                display: block;
+                background: #4a4c4f;
+                position: absolute;
+                top:40%;
+                width: 245px;
+                height: 1px;
+            }
+
+            &:after{
+                left:0;
+            }
+            &:before{
+                right: 0;
+            }
+            .intro-btn{
+                display: inline-block;
+                vertical-align: top;
+                font-size: 14px;
+                text-transform: uppercase;
+                text-align: center;
+                color:$main-color;
+                padding: 9px 25px;
+                border: 2px solid $main-color;
+                background: transparent;
+                transition: background .2s linear,color .2s linear;
+
+                &:hover{
+                    background: $main-color;
+                    color:#000;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.quote{
+    padding: 25px 0 50px;
+    background: #097e89;
+    &__row{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content{
+        width: 100%;
+        max-width:450px;
+    }
+    &__title{
+        font-size: 30px;
+        color:$main-color;
+        margin-bottom: 25px;
+    }
+    &__text{
+        font-size: 12px;
+        color:$main-color;
+        line-height: 20px;
+    }
+    &__contact{
+        width: 100%;
+        max-width:500px;
+        margin-top: 35px;
+    }
+    &-form{
+        display: flex;
+        &__input{
+            flex-grow: 1;
+            .input{
+                width: 100%;
+                padding-left: 20px;
+                font-size: 10px;
+                color:$main-color;
+                background: transparent;
+                height: 45px;
+
+                &_first{
+                    border:1px solid rgba(132,191,196,.5);
+                    border-top-left-radius:4px;
+                    border-bottom-left-radius:4px;
+                }
+                &_secondary{
+                    border-top:1px solid rgba(132,191,196,.5);
+                    border-bottom:1px solid rgba(132,191,196,.5);
+                    border-left: 0;
+                    border-right: 0;
+                }
+                
+                &::placeholder{
+                    color:$main-color;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        &__btn{
+            .btn{
+                height: 45px;
+                display: inline-block;
+                vertical-align: top;
+                @include Myriad();
+                font-weight: 700;
+                padding: 0 30px;
+                text-align: center;
+                font-size: 12px;
+                color:#097e89;
+                background: #fff;
+                border-top-right-radius:4px;
+                border-bottom-right-radius:4px;
+                border: 0;
+                cursor: pointer;
+                transition: background .2s linear;
+
+                &:hover{
+                    background: #23ec31;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
