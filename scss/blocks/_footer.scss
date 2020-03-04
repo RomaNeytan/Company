@@ -138,4 +138,23 @@
             }
         }
     }
+
+    @media (max-width:$screen-sm-max){
+        &__row{
+            flex-direction: column;
+        }
+        &__contacts{
+            margin-top: 35px;
+        }
+        &-form{
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width:400px){
+        padding: 25px 0 25px;
+        &__nav{
+            align-items: flex-start;
+        }
+    }
 }

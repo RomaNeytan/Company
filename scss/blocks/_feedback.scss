@@ -36,10 +36,9 @@
     &-row{
         display: flex;
         justify-content: flex-end;
-        margin: 0 -15px;
+        margin-right:10px;
         &__column{
             flex:0 1 65%;
-            padding:0 15px;
         }
         &__item{
             position: relative;
@@ -88,6 +87,31 @@
         &__pos{
             font-size: 12px;
             color:#272727;
+        }
+    }
+
+    @media (max-width:$screen-md-max){
+        &__item{
+            flex-direction: column;
+        }
+        &__content{
+            margin-bottom: 35px;
+            padding-right: 0;
+        }
+        &-row{
+            &__footer{
+                bottom:14px;
+            }
+        }
+    }
+
+    @media (max-width:744px){
+        &-row{
+            flex-direction: column;
+        }
+
+        &__slider{
+            padding: 25px 15px 25px;;
         }
     }
 }

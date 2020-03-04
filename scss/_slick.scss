@@ -1,0 +1,139 @@
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{
+    &:focus{
+        outline: none;
+    }
+}
+
+.intro-slider{
+    position: relative;
+}
+
+.intro-slider .slick-arrow{
+    position: absolute;
+    top:50%;
+    z-index: 10;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border:0;
+    cursor: pointer;
+    
+    &:before{
+        content: " ";
+        display: block;
+        border: 1px solid #7e759d;
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        top:-7px;
+        left:-5px;
+    }
+    
+
+    &:focus{
+        outline: none;
+    }
+
+    @media (max-width:$screen-sm-max){
+        top:70%;
+    }
+
+    @media (max-width:475px){
+        top:82%;
+    }
+}
+
+.intro-slider .slick-arrow.slick-prev{
+    left:0;
+    background: url("../images/check/left-arrow (1).svg") 0 0 / 100% repeat;
+    @media (max-width:$screen-sm-max){
+        left:10%;
+    }
+}
+
+.intro-slider .slick-arrow.slick-next{
+    right:0;
+    background: url("../images/check/next.svg") 0 0 / 100% repeat;
+    @media (max-width:$screen-sm-max){
+        right:10%;
+    }
+}
+
+// Services
+
+.services__slider{
+    position: relative;
+}
+
+.services__slider .slick-arrow{
+    position: absolute;
+    bottom:0;
+    z-index: 5;
+    font-size: 0;
+    border:0;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.services__slider .slick-arrow.slick-prev{
+    right:28px;
+    background: url("../images/check/left-arrow-copy.png") 0 0 / 100% repeat;
+}
+
+.services__slider .slick-arrow.slick-next{
+    right:0;
+    background: url("../images/check/left-arrow-copy1.png") 0 0 / 100% repeat;
+}
+
+// Feedback
+
+.feedback__slider{
+    position: relative;
+}
+
+.feedback__slider .slick-arrow{
+    position: absolute;
+    top:45%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    background: none;
+    border:0;
+    cursor: pointer;
+    
+    &:focus{
+        outline: none;
+    }
+
+    @media (max-width:1180px){
+        top:65%;
+    }
+}
+
+.feedback__slider .slick-arrow.slick-prev{
+    left:0;
+    background: url("../images/check/left-arrow (1).svg") 0 0 / 100% repeat;
+}
+
+.feedback__slider .slick-arrow.slick-next{
+    right:0;
+    background: url("../images/check/next.svg") 0 0 / 100% repeat;
+}

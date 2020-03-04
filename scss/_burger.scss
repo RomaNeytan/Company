@@ -1,0 +1,57 @@
+.header-toggle{
+    display: none;
+    background: none;
+    border:0;
+    cursor: pointer;
+    padding: 7px 2px;
+
+
+    &:focus{
+        outline: none;
+    }
+
+    &__item{
+        width: 30px;
+        height: 3px;
+        background: $main-color;
+        display: block;
+        position: relative;
+
+        font-size: 0;
+        color:transparent;
+
+        &:before,&:after{
+            content: " ";
+            display: block;
+            width: 30px;
+            height: 100%;
+            background: $main-color;
+            transition: transform .2s linear;
+            position: absolute;
+            z-index: 2;
+        }
+
+        &:before{
+            top:-8px;
+        }
+        &:after{
+            bottom:-8px;
+        }
+    }
+
+    &.active &__item{
+        background: none;
+        &:before{
+            transform-origin: left top;
+            transform: rotate(45deg) translateX(-3px);
+        }
+        &:after{
+            transform-origin: left bottom;
+            transform: rotate(-45deg) translateX(-3px);
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        display: block;
+    }
+}

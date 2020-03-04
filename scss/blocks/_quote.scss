@@ -84,4 +84,33 @@
             }
         }
     }
+
+    @media (max-width:$screen-md-max){
+        &__content{
+            padding-right: 40px;
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        &__row{
+            flex-direction: column;
+        }
+        &__contact{
+            margin-top: 10px;
+        }
+    }
+    @media (max-width:470px){
+        padding: 25px 0;
+        &__title{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        &-form{
+            &__btn{
+                .btn{
+                    padding: 0px 21px;
+                }
+            }
+        }
+    }
 }

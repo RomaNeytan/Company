@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Company for Services">
+    <meta name = "keywords" content = "Company,Services">
     <title>Company</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <!-- Svg -->
@@ -93,7 +102,6 @@
                         C436.008,462.478,438.013,456.472,435.546,451.531z"/>
                 </g>
             </g>
-            <g>
         </symbol>
         <symbol id = "customer" viewBox="0 0 569 569.54905">
             <g>
@@ -138,23 +146,27 @@
     <!-- Main body -->
     <div class="main-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id = "header">
             <div class="container">
                 <div class="header__inner">
                     <!-- Logo -->
                     <div class="header__logo">
                         <a class = "logo" href="#">Fed<span>Ex</span></a>
                     </div>
+                    <!-- Burger -->
+                    <button class="header-toggle" id = "burger">
+                        <span class="header-toggle__item">Menu</span>
+                    </button>
                     <!-- Navigation -->
-                    <nav class="header-menu">
+                    <nav class="header-menu" id = "header__nav">
                         <ul class="header-menu-list">
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Home</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">About</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link header-menu-list__link_active">Services</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Portfolio</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Shop</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Contact</a></li>
-                            <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Pages</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#intro"><a href="#" class="header-menu-list__link">Home</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#about"><a href="#" class="header-menu-list__link">About</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#services"><a href="#" class="header-menu-list__link">Services</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#pages"><a href="#" class="header-menu-list__link">Portfolio</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#portfolio"><a href="#" class="header-menu-list__link">Shop</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#contact"><a href="#" class="header-menu-list__link">Contact</a></li>
+                            <li class="header-menu-list__item" data-scroll = "#shop"><a href="#" class="header-menu-list__link">Pages</a></li>
                         </ul>
                     </nav>
                     <!-- Social -->
@@ -179,15 +191,26 @@
             </div>
         </header>
         <!-- Intro -->
-        <div class="intro">
+        <div class="intro" id = "intro">
             <div class="container">
                 <div class="intro__row">
-                    <div class="intro-slider">
-                        <div class="intro-slider__item">
-                            <h1 class="intro-slider__title">The Best Services</h1>
-                            <div class="intro-slider__description"><p>We provide the best services in the world We provide the best services in the world <br> We provide the best services in the world</p></div>
-                            <div class="intro-slider__btn">
-                                <a href="#" class="intro-btn">Hire US</a>
+                    <div class="intro-slider" id = "intro__slider">
+                        <div>
+                            <div class="intro-slider__item">
+                                <h1 class="intro-slider__title">The Best Services</h1>
+                                <div class="intro-slider__description"><p>We provide the best services in the world We provide the best services in the world <br> We provide the best services in the world</p></div>
+                                <div class="intro-slider__btn">
+                                    <a href="#" class="intro-btn">Hire US</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="intro-slider__item">
+                                <h1 class="intro-slider__title">The Best Developers</h1>
+                                <div class="intro-slider__description"><p>We provide the best services in the world We provide the best services in the world <br> We provide the best services in the world</p></div>
+                                <div class="intro-slider__btn">
+                                    <a href="#" class="intro-btn">Hire US</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -195,7 +218,7 @@
             </div>
         </div>
         <!-- About -->
-        <section class="about">
+        <section class="about" id = "about">
             <div class="about__row">
                 <div class="about__column">
                     <div class="about__block">
@@ -224,65 +247,105 @@
             </div>
         </section>
         <!-- Services -->
-        <section class="services">
+        <section class="services" id = "services">
             <div class="section-header">
                 <h2 class="section-header__title">OUR SERVICES</h2>
             </div>
            <!-- Services main -->
-            <div class="services__slider">
-                <div class="services__column">
-                    <div class="services-item">
-                        <a href = "#" class="services-item__img">
-                            <svg class = "services-item__iccon">
-                                <use xlink:href = "#support"></use>
-                            </svg>
-                        </a>
-                        <h3 class="services-item__title">Web DEVELOPMENT</h3>
-                        <div class="services-item__text"><p>We provide the best world class web development service We provide the best world class web development service.</p></div>
-                        <div class="services-item__btn">
-                            <a href="#" class="btn">MORE DETAILS</a>
+            <div class="services__slider" id = "services-slider">
+                <div>
+                    <div class="services__column">
+                        <div class="services-item">
+                            <a href = "#" class="services-item__img">
+                                <svg class = "services-item__iccon">
+                                    <use xlink:href = "#support"></use>
+                                </svg>
+                            </a>
+                            <h3 class="services-item__title">Web DEVELOPMENT</h3>
+                            <div class="services-item__text"><p>We provide the best world class web development service We provide the best world class web development service.</p></div>
+                            <div class="services-item__btn">
+                                <a href="#" class="btn">MORE DETAILS</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- 2 -->
-                <div class="services__column">
-                    <div class="services-item">
-                        <a href = "#" class="services-item__img">
-                            <svg class = "services-item__iccon">
-                                <use xlink:href = "#technical"></use>
-                            </svg>
-                        </a>
-                        <h3 class="services-item__title">Seo</h3>
-                        <div class="services-item__text"><p>iDeals Solutions has been creating the best client’s experience in using virtual rooms for data storage and exchange.</p></div>
-                        <div class="services-item__btn">
-                            <a href="#" class="btn">MORE DETAILS</a>
+                <div>
+                    <div class="services__column">
+                        <div class="services-item">
+                            <a href = "#" class="services-item__img">
+                                <svg class = "services-item__iccon">
+                                    <use xlink:href = "#technical"></use>
+                                </svg>
+                            </a>
+                            <h3 class="services-item__title">Seo</h3>
+                            <div class="services-item__text"><p>iDeals Solutions has been creating the best client’s experience in using virtual rooms for data storage and exchange.</p></div>
+                            <div class="services-item__btn">
+                                <a href="#" class="btn">MORE DETAILS</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- 3 -->
-                <div class="services__column">
-                    <div class="services-item">
-                        <a href = "#" class="services-item__img">
-                            <svg class = "services-item__iccon">
-                                <use xlink:href = "#customer"></use>
-                            </svg>
-                        </a>
-                        <h3 class="services-item__title">Bussiness</h3>
-                        <div class="services-item__text"><p>We are a global leader in beverage alcohol with an outstanding collection of brands across spirits and beer.</p></div>
-                        <div class="services-item__btn">
-                            <a href="#" class="btn">MORE DETAILS</a>
+                <div>
+                    <div class="services__column">
+                        <div class="services-item">
+                            <a href = "#" class="services-item__img">
+                                <svg class = "services-item__iccon">
+                                    <use xlink:href = "#customer"></use>
+                                </svg>
+                            </a>
+                            <h3 class="services-item__title">Bussiness</h3>
+                            <div class="services-item__text"><p>We are a global leader in beverage alcohol with an outstanding collection of brands across spirits and beer.</p></div>
+                            <div class="services-item__btn">
+                                <a href="#" class="btn">MORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div>
+                    <div class="services__column">
+                        <div class="services-item">
+                            <a href = "#" class="services-item__img">
+                                <svg class = "services-item__iccon">
+                                    <use xlink:href = "#customer"></use>
+                                </svg>
+                            </a>
+                            <h3 class="services-item__title">Bussiness</h3>
+                            <div class="services-item__text"><p>We are a global leader in beverage alcohol with an outstanding collection of brands across spirits and beer.</p></div>
+                            <div class="services-item__btn">
+                                <a href="#" class="btn">MORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div>
+                    <div class="services__column">
+                        <div class="services-item">
+                            <a href = "#" class="services-item__img">
+                                <svg class = "services-item__iccon">
+                                    <use xlink:href = "#customer"></use>
+                                </svg>
+                            </a>
+                            <h3 class="services-item__title">Bussiness</h3>
+                            <div class="services-item__text"><p>We are a global leader in beverage alcohol with an outstanding collection of brands across spirits and beer.</p></div>
+                            <div class="services-item__btn">
+                                <a href="#" class="btn">MORE DETAILS</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Feedback -->
-        <section class="feedback">
+        <section class="feedback" id = "pages">
             <div class="section-header">
                 <h2 class="section-header__title">Feedback</h2>
             </div>
             <!-- feedback main -->
-            <div class="feedback__slider">
+            <div class="feedback__slider" id = "feedback-slider">
                 <div class="feedback__item">
                     <div class="feedback__content">
                         <div class="feedback__text">
@@ -345,10 +408,73 @@
                         </div>
                     </div>
                 </div>
+                <!-- 2 -->
+                <div class="feedback__item">
+                    <div class="feedback__content">
+                        <div class="feedback__text">
+                            <p>It was always a pleasure doing bussiness with them. I love the quality of work.</p>
+                        </div>
+                        <div class="feedback__number">
+                            <span>2/10</span>
+                        </div>
+                    </div>
+                    <div class="feedback-row">
+                        <div class="feedback-row__column">
+                            <div class="feedback-row__item">
+                                <div class="feedback-row__img">
+                                    <a href="#"><img src="images/feedback/1.png" alt="Imran Khan"></a>
+                                </div>
+                                <div class="feedback-row__footer">
+                                    <div class="feedback-row__number">
+                                        01
+                                    </div>
+                                    <div class="feedback-row__block">
+                                        <div class="feedback-row__name">Imran Khan</div>
+                                        <div class="feedback-row__pos">CEO, Vesso</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="feedback-row__column">
+                            <div class="feedback-row__item">
+                                <div class="feedback-row__img">
+                                    <a href="#"><img src="images/feedback/2.png" alt="Imran Khan"></a>
+                                </div>
+                                <div class="feedback-row__footer">
+                                    <div class="feedback-row__number">
+                                        01
+                                    </div>
+                                    <div class="feedback-row__block">
+                                        <div class="feedback-row__name">Imran Khan</div>
+                                        <div class="feedback-row__pos">CEO, Vesso</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="feedback-row__column">
+                            <div class="feedback-row__item">
+                                <div class="feedback-row__img">
+                                    <a href="#"><img src="images/feedback/3.png" alt="Imran Khan"></a>
+                                </div>
+                                <div class="feedback-row__footer">
+                                    <div class="feedback-row__number">
+                                        01
+                                    </div>
+                                    <div class="feedback-row__block">
+                                        <div class="feedback-row__name">Imran Khan</div>
+                                        <div class="feedback-row__pos">CEO, Vesso</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Clients -->
-        <section class="clients">
+        <section class="clients" id = "portfolio">
             <div class="section-header section-header_clients">
                 <h2 class="section-header__title section-header__title_clients">Clients</h2>
             </div>
@@ -357,7 +483,7 @@
                 <div class="clients-inner">
                     <div class="clients__column">
                         <div class="clients-item">
-                            <div class="clients-item__img">
+                            <div class="clients-item__img clients-item__img_hs">
                                 <a href="#"><img src="images/clients/1.png" alt="Abobe"></a>
                             </div>
                         </div>
@@ -365,7 +491,7 @@
                     <!-- 2 -->
                     <div class="clients__column">
                         <div class="clients-item">
-                            <div class="clients-item__img">
+                            <div class="clients-item__img clients-item__img_h">
                                 <a href="#"><img src="images/clients/2.png" alt="Hcl"></a>
                             </div>
                         </div>
@@ -373,7 +499,7 @@
                     <!-- 3 -->
                     <div class="clients__column">
                         <div class="clients-item">
-                            <div class="clients-item__img">
+                            <div class="clients-item__img clients-item__img_hs">
                                 <a href="#"><img src="images/clients/3.png" alt="Infosys"></a>
                             </div>
                         </div>
@@ -381,7 +507,7 @@
                     <!-- 4 -->
                     <div class="clients__column">
                         <div class="clients-item">
-                            <div class="clients-item__img">
+                            <div class="clients-item__img clients-item__img_hm">
                                 <a href="#"><img src="images/clients/4.png" alt="Invision"></a>
                             </div>
                         </div>
@@ -389,7 +515,7 @@
                     <!-- 5 -->
                     <div class="clients__column">
                         <div class="clients-item">
-                            <div class="clients-item__img">
+                            <div class="clients-item__img clients-item__img_hm">
                                 <a href="#"><img src="images/clients/5.png" alt="Cisco"></a>
                             </div>
                         </div>
@@ -422,7 +548,7 @@
             </div>
         </section>
         <!-- quote -->
-        <section class="quote">
+        <section class="quote" id = "contact">
             <div class="container">
                 <div class="quote__row">
                     <div class="quote__content">
@@ -448,38 +574,44 @@
             </div>
         </section>
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer" id = "shop">
             <div class="container">
                 <div class="footer__row">
                     <!-- Footer-nav -->
                     <div class="footer__nav">
                         <div class="footer__column">
                             <h6 class="footer__title">Product</h6>
-                            <nav class="footer-menu">
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Cost & Governance</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Security & Complaince</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Product N</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Pricing & plans</a></li>
+                            <nav class="footer-nav">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Cost & Governance</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Security & Complaince</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Product N</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Pricing & plans</a></li>
+                                </ul>
                             </nav>
                         </div>
                         <!-- 2 -->
                         <div class="footer__column">
                             <h6 class="footer__title">Learn</h6>
-                            <nav class="footer-menu">
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Articles</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Register a demo</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Webinars</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">FAQs</a></li>
+                            <nav class="footer-nav">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Articles</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Register a demo</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Webinars</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">FAQs</a></li>
+                                </ul>
                             </nav>
                         </div>
                         <!-- 3 -->
                         <div class="footer__column">
                             <h6 class="footer__title">Company</h6>
                             <nav class="footer-menu">
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">About</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Careers</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Partners</a></li>
-                                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Contact</a></li>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">About</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Careers</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Partners</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Contact</a></li>
+                                </ul>
                             </nav>
                         </div>
                     </div>
@@ -533,6 +665,7 @@
     </div>
     
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src = "js/slick.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
